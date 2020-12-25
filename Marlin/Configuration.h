@@ -499,9 +499,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.0 }
     #define DEFAULT_Kd_LIST { 114.00, 112.0 }
   #else
-    #define DEFAULT_Kp  19.00
-    #define DEFAULT_Ki   1.34
-    #define DEFAULT_Kd  67.50
+    #define DEFAULT_Kp 17.81
+    #define DEFAULT_Ki 1.51
+    #define DEFAULT_Kd 52.47
   #endif
 #endif // PIDTEMP
 
@@ -546,10 +546,9 @@
 
 
   //FB5
-  #define DEFAULT_bedKp 40.68
-  #define DEFAULT_bedKi 7.93
-  #define DEFAULT_bedKd 139.15
-
+  #define DEFAULT_bedKp 29.74
+  #define DEFAULT_bedKi 5.62
+  #define DEFAULT_bedKd 104.91
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -687,13 +686,13 @@
  */
 #define X_DRIVER_TYPE  TMC2208_STANDALONE
 #define Y_DRIVER_TYPE  TMC2208_STANDALONE
-#define Z_DRIVER_TYPE  A4988
+#define Z_DRIVER_TYPE  TMC2208_STANDALONE
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-#define E0_DRIVER_TYPE A4988
+#define E0_DRIVER_TYPE TMC2208_STANDALONE
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -748,7 +747,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 409 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 40, 40, 200, 203 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1093,9 +1092,9 @@
 
 // @section machine
 
-//#define ALL_DRV_2208
+#define ALL_DRV_2208
 //#define FB_4S_STOCK
-#define FB_5_STOCK
+//#define FB_5_STOCK
 
 #ifdef ALL_DRV_2208
 #define USR_E0_DIR true
@@ -1156,7 +1155,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 255
+#define X_BED_SIZE 240
 #define Y_BED_SIZE 210
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
